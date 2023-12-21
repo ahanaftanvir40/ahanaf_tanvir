@@ -185,7 +185,7 @@
     <section id="contact" class="rounded-box py-5">
         <div class="container">
             <h2 class="display-4 text-center mb-5 text-white">Contact Me</h2>
-            <form id="contactForm">
+            <form action="https://formspree.io/f/mwkgeryv" method="POST">
                 <div class="form-row">
                     <div class="form-group col-md-6 text-white">
                         <label for="name">Name:</label>
@@ -196,10 +196,16 @@
                         <input type="email" id="email" name="email" class="form-control" required>
                     </div>
                 </div>
+                <div class="form-group text-white">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
+                </div>
                 <button type="submit" class="btn btn-dark">Send Message</button>
             </form>
         </div>
     </section>
+
+
 
     <footer class="bg-dark text-white text-center py-3">
         <div class="container">
