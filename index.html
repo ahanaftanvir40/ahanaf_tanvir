@@ -4,19 +4,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Ahanaf Tanvir - Professional Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 </head>
 
 <body>
-    <header class="header">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Skills</a>
-        <a href="#">CV</a>
-        <a href="#">Contact Me</a>
 
+    <header class="bg-dark text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-3">Ahanaf Tanvir</h1>
+            <p class="lead">Full Stack Web Developer</p>
+        </div>
     </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container text-center">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/your-github-username" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.facebook.com/your-facebook-profile" target="_blank">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.instagram.com/your-instagram-profile" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+
+                    <!-- Add more social media icons and links as needed -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="berserk_about.jpg" alt="About Me" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="display-4">About Me</h2>
+                    <p class="lead">I am Ahanaf Tanvir, a seasoned developer on a relentless journey through the world
+                        of
+                        technology.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-light py-5">
+        <div class="container">
+            <h2 class="display-4 text-center mb-5">Contact Me</h2>
+            <form id="contactForm">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-dark">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-5">
+        <div class="container">
+            <h2 class="display-4 text-center mb-5">My Projects</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4" onclick="animatePortfolioItem(this)">
+                    <div class="portfolio-item">
+                        <img src="berserk_project1.jpg" alt="Project 1" class="img-fluid rounded">
+                        <h3 class="text-white">The Black Swordsman</h3>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4" onclick="animatePortfolioItem(this)">
+                    <div class="portfolio-item">
+                        <img src="berserk_project2.jpg" alt="Project 2" class="img-fluid rounded">
+                        <h3 class="text-white">The Eclipse</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p class="mb-0">&copy; 2023 Guts. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
 </body>
 
 </html>
