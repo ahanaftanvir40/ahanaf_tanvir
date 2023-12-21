@@ -9,51 +9,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// FadeIn animation for elements on scroll
-document.addEventListener('DOMContentLoaded', () => {
-    let elementsToAnimate = document.querySelectorAll('.container, .portfolio-item');
 
-    const fadeIn = (element) => {
-        anime({
-            targets: element,
-            opacity: [0, 1],
-            translateY: [20, 0],
-            duration: 1000,
-            easing: 'easeInOutQuad'
-        });
-    };
-
-    const debounce = (func, wait = 20, immediate = true) => {
-        let timeout;
-        return function () {
-            const context = this,
-                args = arguments;
-            const later = function () {
-                timeout = null;
-                if (!immediate) func.apply(context, args);
-            };
-            const callNow = immediate && !timeout;
-            clearTimeout(timeout);
-            timeout = setTimeout(later, wait);
-            if (callNow) func.apply(context, args);
-        };
-    };
-
-    const checkSlide = () => {
-        elementsToAnimate.forEach(element => {
-            const slideInAt = (window.scrollY + window.innerHeight) - element.clientHeight / 2;
-            const elementBottom = element.offsetTop + element.clientHeight;
-            const isHalfShown = slideInAt > element.offsetTop;
-            const isNotScrolledPast = window.scrollY < elementBottom;
-
-            if (isHalfShown && isNotScrolledPast) {
-                fadeIn(element);
-            }
-        });
-    };
-
-    window.addEventListener('scroll', debounce(checkSlide));
-});
 
 // Anime.js animation for portfolio items
 document.querySelectorAll('.portfolio-item').forEach(item => {
@@ -76,16 +32,6 @@ document.querySelectorAll('.portfolio-item').forEach(item => {
     });
 });
 
-// Anime.js animation for skills
-document.querySelectorAll('.skill-icon').forEach(skill => {
-    skill.addEventListener('click', function () {
-        anime({
-            targets: this,
-            rotate: 360,
-            duration: 1000,
-            easing: 'easeInOutQuad'
-        });
-    });
-});
+
 
 
