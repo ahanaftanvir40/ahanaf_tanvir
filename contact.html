@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahanaf Tanvir - Professional Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .navbar-nav .nav-link i {
+            font-size: 24px;
+            /* Adjust the font size as needed */
+        }
+
+        .rounded-img {
+            border-radius: 30%;
+            max-width: 300px;
+            /* Adjust the maximum width as needed */
+        }
+
+        .skill-icon {
+            max-width: 80px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .skill-icon:hover {
+            transform: rotate(360deg);
+        }
+
+        /* Add smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+
+<body>
+    <section id="contact" class="bg-light py-5">
+        <div class="container">
+            <h2 class="display-4 text-center mb-5">Contact Me</h2>
+            <form id="contactForm">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-dark">Send Message</button>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>

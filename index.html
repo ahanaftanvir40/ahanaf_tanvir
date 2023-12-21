@@ -4,11 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahanaf Tanvir - Professional Portfolio</title>
+    <title>Ahanaf Tanvir - Portfolio</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <style>
+        header {
+            background-color: rgba(1, 11, 19, 0.85) !important;
+            /* Adjust the alpha value for transparency */
+            color: white;
+            /* Set text color to white */
+        }
+
+        .navbar {
+            background-color: rgba(1, 11, 19, 0.8) !important;
+        }
+
         .navbar-nav .nav-link i {
             font-size: 24px;
             /* Adjust the font size as needed */
@@ -29,6 +40,23 @@
         .skill-icon:hover {
             transform: rotate(360deg);
         }
+
+        /* Add smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Semi-transparent rounded box style */
+        .rounded-box {
+            background-color: rgba(0, 0, 0, 0.8);
+            /* Adjust the alpha value for transparency */
+            padding: 20px;
+            /* Adjust the padding to make the box smaller */
+            border-radius: 10px;
+            margin: 200px auto;
+            max-width: 1500px;
+            /* Adjust the max-width to control the width of the box */
+        }
     </style>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
@@ -38,7 +66,7 @@
 
 <body>
 
-    <header class="bg-dark text-white text-center py-5">
+    <header class="text-white text-center py-5">
         <div class="container">
             <h1 class="display-3">Ahanaf Tanvir</h1>
             <p class="lead">Full Stack Web Developer</p>
@@ -46,13 +74,24 @@
     </header>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container text-center">
+        <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Contact Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">CV</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="https://www.linkedin.com/in/ahanaf-tanvir-980a06264/" target="_blank">
                             <i class="fab fa-linkedin"></i>
@@ -73,19 +112,18 @@
                             <i class="fab fa-instagram"></i>
                         </a>
                     </li>
-                    <!-- Add more social media icons and links as needed -->
                 </ul>
             </div>
         </div>
     </nav>
 
-    <section id="about" class="py-5">
+    <section id="about" class="py-5 ">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 offset-md-1">
                     <img src="res/about.jpg" alt="About Me" class="img-fluid rounded rounded-img">
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-5 text-white">
                     <h2 class="display-4">About Me</h2>
                     <p class="lead">I am Ahanaf Tanvir, a lone warrior on a journey through the world of development,
                         facing challenges with the strength of the Berserker Armor.</p>
@@ -94,68 +132,57 @@
         </div>
     </section>
 
-    <section id="skills" class="bg-light py-5">
+    <section id="skills" class="rounded-box">
         <div class="container">
-            <h2 class="display-4 text-center mb-5">My Skills</h2>
+            <h2 class="display-4 text-center mb-5 text-white">My Skills</h2>
             <div class="row">
                 <div class="col-md-4 text-center">
                     <img src="res/python.png" alt="Python" class="skill-icon" onclick="animateSkill(this)">
-                    <h3 class="mt-3">Python</h3>
+                    <h3 class="mt-3 text-white">Python</h3>
                 </div>
                 <div class="col-md-4 text-center">
                     <img src="res/dj.png" alt="Django" class="skill-icon" onclick="animateSkill(this)">
-                    <h3 class="mt-3">Django</h3>
+                    <h3 class="mt-3 text-white">Django</h3>
                 </div>
                 <div class="col-md-4 text-center">
                     <img src="res/f.png" alt="Flutter" class="skill-icon" onclick="animateSkill(this)">
-                    <h3 class="mt-3">Flutter</h3>
+                    <h3 class="mt-3 text-white">Flutter</h3>
                 </div>
                 <div class="col-md-4 text-center">
                     <img src="res/php.png" alt="PHP" class="skill-icon" onclick="animateSkill(this)">
-                    <h3 class="mt-3">PHP</h3>
+                    <h3 class="mt-3 text-white">PHP</h3>
                 </div>
                 <div class="col-md-4 text-center">
                     <img src="res/sql.png" alt="mysql" class="skill-icon" onclick="animateSkill(this)">
-                    <h3 class="mt-3">MySQL</h3>
+                    <h3 class="mt-3 text-white">MySQL</h3>
                 </div>
                 <div class="col-md-4 text-center">
                     <img src="res/html.png" alt="HTML" class="skill-icon" onclick="animateSkill(this)">
-                    <h3 class="mt-3">HTML</h3>
+                    <h3 class="mt-3 text-white">HTML</h3>
                 </div>
             </div>
         </div>
     </section>
 
-
-
-    <section id="portfolio" class="py-5">
+    <section id="portfolio" class="rounded-box py-5">
         <div class="container">
-            <h2 class="display-4 text-center mb-5">My Projects</h2>
+            <h2 class="display-4 text-center mb-5 text-white">My Projects</h2>
             <div class="row">
                 <div class="col-md-6 mb-4 portfolio-item">
                     <a href="https://github.com/ahanaftanvir40/CSE370-Project" target="_blank">
-                        <!-- Replace "your_project_link.html" with the actual link -->
                         <div class="portfolio-item" onclick="animatePortfolioItem(this)">
                             <img src="res/project1.PNG" alt="Project 1" class="img-fluid rounded">
                             <h3 class="text-black">Online Course Management System</h3>
                         </div>
                     </a>
                 </div>
-                <!--<div class="col-md-6 mb-4 portfolio-item" onclick="animatePortfolioItem(this)">
-                    <div class="portfolio-item">
-                        <img src="berserk_project2.jpg" alt="Project 2" class="img-fluid rounded">
-                        <h3 class="text-white">The Eclipse</h3>
-                    </div>
-                </div>
             </div>
-        </div>-->
+        </div>
     </section>
 
-    </section>
-
-    <section id="contact" class="bg-light py-5">
+    <section id="contact" class="rounded-box py-5">
         <div class="container">
-            <h2 class="display-4 text-center mb-5">Contact Me</h2>
+            <h2 class="display-4 text-center mb-5 text-white">Contact Me</h2>
             <form id="contactForm">
                 <div class="form-row">
                     <div class="form-group col-md-6">
