@@ -56,12 +56,36 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Anime.js animation for portfolio items
-function animatePortfolioItem(item) {
-    anime({
-        targets: item,
-        scale: [1, 1.1],
-        duration: 500,
-        easing: 'easeInOutQuad'
+document.querySelectorAll('.portfolio-item').forEach(item => {
+    item.addEventListener('mouseover', function () {
+        anime({
+            targets: this,
+            scale: [1, 1.1],
+            duration: 500,
+            easing: 'easeInOutQuad'
+        });
     });
-}
+
+    item.addEventListener('mouseout', function () {
+        anime({
+            targets: this,
+            scale: [1.1, 1],
+            duration: 500,
+            easing: 'easeInOutQuad'
+        });
+    });
+});
+
+// Anime.js animation for skills
+document.querySelectorAll('.skill-icon').forEach(skill => {
+    skill.addEventListener('click', function () {
+        anime({
+            targets: this,
+            rotate: 360,
+            duration: 1000,
+            easing: 'easeInOutQuad'
+        });
+    });
+});
+
 
