@@ -1,0 +1,17 @@
+body {
+    animation: gradientAnimation 300s infinite alternate;
+    /* Adjust the animation duration as needed */
+    background-image: url('res/back.jpg');
+    /* Replace 'your-image-url.jpg' with the actual URL or path to your image */
+    background-size: cover;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
