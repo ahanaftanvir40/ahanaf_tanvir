@@ -7,7 +7,7 @@
     <title>Ahanaf Tanvir - Professional Portfolio</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="stylesheet" href="res\edu.css">
+
     <style>
         header {
             background-color: rgba(1, 11, 19, 0.1) !important;
@@ -37,6 +37,24 @@
             color: white;
             /* Set text color to white */
 
+        }
+
+        body {
+            animation: gradientAnimation 300s infinite alternate;
+            /* Adjust the animation duration as needed */
+            background-image: url('res/back.jpg');
+            /* Replace 'your-image-url.jpg' with the actual URL or path to your image */
+            background-size: cover;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            100% {
+                background-position: 100% 50%;
+            }
         }
     </style>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
